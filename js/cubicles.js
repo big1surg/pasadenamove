@@ -1,5 +1,5 @@
 //script for cubicles
-ar appname = angular.module('office', []);
+var appname = angular.module('office', []);
 appname.controller('officeRepeat', ['$scope',
   function($scope) {
     $scope.people = [
