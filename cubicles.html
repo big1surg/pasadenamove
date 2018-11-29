@@ -2,7 +2,7 @@
 <!--maybe break up into groups -->
 
 <!doctype html>
-<html ng-app="office">
+<html ng-app="cubicles">
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -10,14 +10,15 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular.min.js"></script>
-    <script src="js\cubicles.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular.min.js"></script>
+    <script src="cubicleScript.js"></script>
     <title>Pasadena Move - Cubicles</title>
   </head>
-  <body ng-controller="officeRepeat">
+  <body ng-controller="cubicleRepeat">
         <div class="jumbotron">
             <h1 class="display-4">Cubicles</h1>
 			<p class="lead">Cubicle Count: 81 </p>
+			<p class="lead">Note: this was updated 2 months ago, some stuff may be out of date </p>
         </div>
         <!---Recrusively go over people-->
 		<!--
@@ -27,7 +28,7 @@
         </div>
 		-->
 		
-		<!--PERSON Card----------------->
+		<!----PERSON Card----------------->
 		<div data-ng-repeat="person in people">
 			<p>
 				<button class="btn btn-primary btn-block" type="button" data-toggle="collapse" data-target="#{{person.name}}" aria-expanded="false" aria-controls="collapseExample">
@@ -45,7 +46,7 @@
 						<li>Computer Type: {{person.type}}</li>
 						<li>Standing Desk: {{person.standingDesk}}</li>
 						<li>Notes: {{person.notes}}</li>
-						<img src="photos1\\{{person.name}}.jpg" height="500" width="500" class="img-fluid">
+						<img src="photos1\\{{person.name}}.jpg" height="500" width="500" class="img-fluid" alt="there is no image">
 					</ul>
 				</div>
 			</div>
